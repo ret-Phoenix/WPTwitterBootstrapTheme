@@ -1,0 +1,16 @@
+/*!
+	Theme Name: Savage
+	Theme URI: http://itpath.ru
+	Description: Free Twitter bootstrap based theme
+	Author: Serg Ushakov
+	Author URI: http://itpath.ru
+	Version: 1.0
+    License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) 
+	License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+*/
+
+@import url('bootstrap/css/bootstrap.css'); 
+@import url('bootstrap/css/carousel.css'); 
+@import url('bootstrap/css/fix.css'); 
+ 
