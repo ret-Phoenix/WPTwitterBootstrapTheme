@@ -1,6 +1,7 @@
+  <section>
     <!-- FOOTER -->
     <div class="footer">
-      <div class='container-fluid'>
+      <div class='container'>
           <?php
           echo '<div class="row">';
           $theme_option = get_option('savage-tw-bt-theme');

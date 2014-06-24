@@ -1,7 +1,6 @@
-  <section>
     <!-- FOOTER -->
     <div class="footer">
-      <div class='container'>
+      <div class='container-fluid'>
           <?php
           echo '<div class="row">';
           $theme_option = get_option('savage-tw-bt-theme');
@@ -38,13 +37,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include inDIVidual files as needed -->
   <script src="js/bootstrap.min.js"></script>
-
-  <?php wp_footer(); ?>
-
   <?php
   echo $theme_option['add-footer'];
 
   ?>
+
+
+  <?php wp_footer(); ?>
+
 
 </body>
 </html>

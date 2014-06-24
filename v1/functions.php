@@ -18,8 +18,7 @@ function true_thumbnail_url_only( $html ) {
 function blog_row_start($postfix='') {
 	echo '<SECTION>
 	<DIV class="container'.(($postfix=='') ? '': '-'.$postfix).'">
-		<DIV class="row">
-	';
+		<DIV class="row">';
 }
 
 function blog_row_end() {

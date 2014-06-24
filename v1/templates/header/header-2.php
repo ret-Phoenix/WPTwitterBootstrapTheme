@@ -24,9 +24,9 @@
   <?php
   $theme_options = get_option('savage-tw-bt-theme');
   echo $theme_options['add-header'];
-  if ($theme_options['show-slider-content'] == 'on') {
-    show_content_slider();
-  }
+  // if ($theme_options['show-slider-content'] == 'on') {
+  //   show_content_slider(2);
+  // }
 
   ?>
 
@@ -39,7 +39,7 @@
   }
 
   if ($theme_options['show-slider-top'] == 'on') {
-    show_slider_top();
+    show_slider_top(2);
   }
 
 
@@ -47,8 +47,7 @@
   <div class="container">
     <div class="row">
       <DIV class='navbar navbar-default'>
-        <DIV class='col-sm-3'></DIV>
-        <DIV class='col-sm-6'>
+        <DIV class='col-sm-9'>
           <header id="header" class="collapse navbar-collapse" role="banner">
 
             <?php 

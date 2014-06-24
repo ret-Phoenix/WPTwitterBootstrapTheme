@@ -1,3 +1,3 @@
 <?php
-include(TEMPLATEPATH.'/templates/single/single-1.php');
+include(TEMPLATEPATH.'/templates/single/single-2.php');
 ?>
