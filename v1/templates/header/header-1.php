@@ -23,6 +23,7 @@
 
   <?php
   $theme_options = get_option('savage-tw-bt-theme');
+  echo $theme_options['add-header'];
   if ($theme_options['show-slider-content'] == 'on') {
     show_content_slider();
   }

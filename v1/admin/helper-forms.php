@@ -54,5 +54,11 @@ function form_edit($prmName, $prmSize = 50, $prmValue = "", $prmClass = "", $dis
         . ' value="' . $prmValue . '" ' . echo_class($prmClass) . disabled_state($disabled) . '>';
 }
 
+function form_text($prmName, $prmRows, $prmCols, $prmValue, $prmClass = "", $disabled = 0)
+{
+    return '<textarea name="' . $prmName . '" id="' . $prmName . '" rows="' . $prmRows
+        . '" cols="' . $prmCols . '"' . echo_class($prmClass) . disabled_state($disabled) . '>'
+        . $prmValue . '</textarea>';
+}
 
 ?>

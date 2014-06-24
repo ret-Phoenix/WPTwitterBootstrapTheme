@@ -1,5 +1,5 @@
 <?php
 
-include(TEMPLATEPATH.'/templates/header/header-1.php');
+include(TEMPLATEPATH.'/templates/header/header-2.php');
 
 ?>

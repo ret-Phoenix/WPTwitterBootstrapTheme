@@ -42,7 +42,7 @@
   <?php wp_footer(); ?>
 
   <?php
-  echo $theme_option['metrika'];
+  echo $theme_option['add-footer'];
 
   ?>
 
