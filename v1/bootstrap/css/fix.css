@@ -1,5 +1,5 @@
 .blog-post {
-
+    /*background-color: green;*/
 }
 
 .blog-post-title {
@@ -63,3 +63,19 @@ height: 180px;
     margin-top:5px;
     font-weight:bold
 }
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  /* background-color: red;*/
+  background-color: #fff;
+}
+
+
+/*.navbar-nav > li > a {
+    float:none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+*/

@@ -1,48 +1,68 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html <?php language_attributes(); ?>>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title><?php wp_title('|',1,'right'); ?> <?php bloginfo('name'); ?></title>
-	
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet"> 
 	<?php wp_head(); ?>
+    
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  // ga('create', 'UA-18652078-1', 'itpath.ru');
+  // ga('send', 'pageview');
+
+</script>    
+    
 </head>
 
-<body>
-	<SECTION>
-		<DIV class="container">
-			<div id="header" class="navbar navbar-inverse navbar-fixed-top" role="banner">
-				<div class="container">
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only"><?php _e('Toggle navigation', ''); ?></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<?php // logo();?>
-					</div>
+<body <?php body_class() ?>>
 
-					<div class="hidden-xs">
-						<?php 
-						if ( has_nav_menu( 'primary' ) ) {
-							wp_nav_menu( array(
-								'theme_location'  => 'primary',
-								'container'       => false,
-								'menu_class'      => 'nav navbar-nav navbar-main',
-								'fallback_cb'     => 'wp_page_menu',
-            					//'walker'          => new wp_bootstrap_navwalker()
-								)
-							); 
-						}
-						?>
-					</div>
-				</div>
-			</div><!--/#header-->
+  <?php
+  $theme_options = get_option('savage-tw-bt-theme');
+  if ($theme_options['show-slider-content'] == 'on') {
+    show_content_slider();
+  }
 
-		</DIV>
-		
-	</SECTION>
-	
+  ?>
+
+
+  <?php
+  if (header_image()) {
+    ?> 
+    <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+    <?php  
+  }
+
+  if ($theme_options['show-slider-top'] == 'on') {
+    show_slider_top();
+  }
+
+
+  ?>
+  <div class="container-fluid">
+    <DIV class='row'>
+      <DIV>
+        <header id="header" class="navbar navbar-default" role="banner">
+         <div>
+          <?php 
+          if ( has_nav_menu( 'primary' ) ) {
+           wp_nav_menu( array(
+            'theme_location'  => 'primary',
+            'container'       => false,
+            'menu_class'      => 'nav navbar-nav navbar-main',
+            'fallback_cb'     => 'wp_page_menu',
+            // 'walker'          => new wp_bootstrap_navwalker()
+            )
+           ); 
+         }
+         ?>
+       </div>
+     </header><!--/#header-->
+   </DIV>
+ </DIV>
+
+</div>

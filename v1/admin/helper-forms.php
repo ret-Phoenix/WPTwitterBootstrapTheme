@@ -48,4 +48,11 @@ function form_checkbox($prm_title, $prmName, $prmValue, $prmClass = "", $disable
 }
 
 
+function form_edit($prmName, $prmSize = 50, $prmValue = "", $prmClass = "", $disabled = 0)
+{
+    return '<input name="' . $prmName . '" id="' . $prmName . '" type="text" size="' . $prmSize . '"'
+        . ' value="' . $prmValue . '" ' . echo_class($prmClass) . disabled_state($disabled) . '>';
+}
+
+
 ?>

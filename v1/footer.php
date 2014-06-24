@@ -1,5 +1,5 @@
 <?php
 
-include('templates/footer/footer-1.php');
+include('templates/footer/footer-3.php');
 
 ?>

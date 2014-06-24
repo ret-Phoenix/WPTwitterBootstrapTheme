@@ -93,6 +93,22 @@ class ControlPanel {
 		echo '<p>'.form_checkbox('Отображать Автора и время', 'show-author', $this->options["show-author"]).'</p>';
 		echo '<p>'.form_checkbox('Отображать слайдер сверху', 'show-slider-top', $this->options["show-slider-top"]).'</p>';
 		echo '<p>'.form_checkbox('Отображать слайдер контента', 'show-slider-content', $this->options["show-slider-content"]).'</p>';
+
+		echo '<h3>'._('Template options').'</h3>';
+		echo '<p><label>'._('Header view').': '.form_edit('view-header', 10, '').'</label></p>';
+		echo '<p><label>'._('Footer view').': '.form_edit('view-footer', 10, '').'</label></p>';
+
+		echo '<p><label>'._('Frontpage view').': '.form_edit('view-frontpage', 10, '').'</label></p>';
+		echo '<p><label>'._('Index view').': '.form_edit('view-index', 10, '').'</label></p>';
+		echo '<p><label>'._('Home view').': '.form_edit('view-home', 10, '').'</label></p>';
+
+		echo '<p><label>'._('Single view').': '.form_edit('view-single', 10, '').'</label></p>';
+		echo '<p><label>'._('Page view').': '.form_edit('view-page', 10, '').'</label></p>';
+
+		echo '<p><label>'._('Slider view').': '.form_edit('view-slider', 10, '').'</label></p>';
+		// echo '<p><label>'._('Sidebar view').': '.form_edit('view-sidebar', 10, '').'</label></p>';
+		
+
 		echo '<input type="submit" value="Сохранить" name="cp_save" class="dochanges" />';
 		echo '</form>';
 	}
