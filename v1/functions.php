@@ -1,11 +1,11 @@
 <?php 
 
-function show_content_slider() {
-	include('/templates/slider/content-slider-3.php');
-}
+// function show_content_slider() {
+// 	include(TEMPLATEPATH.'/templates/slider/-content-slider-1.php');
+// }
 
-function show_slider_top() {
-	include(TEMPLATEPATH.'/templates/slider/slider-3.php');
+function show_slider_top($postfix='1') {
+	include(TEMPLATEPATH.'/templates/slider/slider-'.$postfix.'.php');
 }
 
 
@@ -15,9 +15,9 @@ function true_thumbnail_url_only( $html ) {
 }
 // add_filter('post_thumbnail_html', 'true_thumbnail_url_only', 10, 5);
 
-function blog_row_start() {
+function blog_row_start($postfix='') {
 	echo '<SECTION>
-	<DIV class="container-fluid">
+	<DIV class="container'.(($postfix=='') ? '': '-'.$postfix).'">
 		<DIV class="row">
 	';
 }
@@ -122,7 +122,7 @@ function savage_get_post_content()
 	
 	echo '<h2 class="blog-post-title">'.$thumb.'<a href="'.$link.'" rel="bookmark">'.$title.'</a></h2>';
 
-	the_content('', FALSE,'' );
+	the_content('', more_link_text, strip_teaser);
 
 	echo '<br>';
 	echo '<p class="help-block">';

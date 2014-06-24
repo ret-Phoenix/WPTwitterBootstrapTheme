@@ -21,7 +21,7 @@ $query = get_posts(array(
 
   <div class="container">
     <DIV class='row'>
-      <DIV>
+      
 
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -68,6 +68,6 @@ $query = get_posts(array(
         </div><!-- /.carousel -->      
 
 
-    </DIV>
+    
   </DIV>
   </DIV>

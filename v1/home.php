@@ -1,3 +1,3 @@
 <?php
-include('templates/index/index-1.php');
+include(TEMPLATEPATH.'/templates/index/index-1.php');
 ?>

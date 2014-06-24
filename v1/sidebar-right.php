@@ -1,5 +1,6 @@
+<br>
 <?php
 
-include('templates/sidebar/sidebar-1-right.php');
+include(TEMPLATEPATH.'/templates/sidebar/sidebar-1-right.php');
 
 ?>

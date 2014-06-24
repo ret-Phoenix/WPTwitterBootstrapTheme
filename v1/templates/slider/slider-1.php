@@ -19,9 +19,9 @@ $query = get_posts(array(
 // print_r($query);
   ?>
 
-  <div class="container">
+  <div class="container-fluid">
     <DIV class='row'>
-      <DIV class='col-sm-12'>
+      <DIV>
 
 
         <div id="myCarousel" class="carousel slide" data-ride="carousel">

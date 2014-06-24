@@ -11,6 +11,6 @@
 
 
 get_header();
-include('templates/single/single-3.php');
+include(TEMPLATEPATH.'/templates/single/single-2.php');
 get_footer(); 
 ?>

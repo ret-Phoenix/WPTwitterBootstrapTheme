@@ -1,9 +1,3 @@
 <?php
-get_header();
-blog_row_start();
-	get_sidebar('right');
-	include('templates/single/single-3.php');
-	get_sidebar('left');
-blog_row_end();
-get_footer(); 
+include(TEMPLATEPATH.'/templates/single/single-1.php');
 ?>

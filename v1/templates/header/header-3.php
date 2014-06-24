@@ -5,8 +5,8 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link href="<?php bloginfo('stylesheet_url');?>" rel="stylesheet"> 
 	<?php wp_head(); ?>
-    
-<script>
+
+  <script>
   // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -15,8 +15,8 @@
   // ga('create', 'UA-18652078-1', 'itpath.ru');
   // ga('send', 'pageview');
 
-</script>    
-    
+  </script>    
+
 </head>
 
 <body <?php body_class() ?>>
@@ -44,25 +44,30 @@
 
   ?>
   <div class="container-fluid">
-    <DIV class='row'>
-      <DIV>
-        <header id="header" class="navbar navbar-default" role="banner">
-         <div>
-          <?php 
-          if ( has_nav_menu( 'primary' ) ) {
-           wp_nav_menu( array(
-            'theme_location'  => 'primary',
-            'container'       => false,
-            'menu_class'      => 'nav navbar-nav navbar-main',
-            'fallback_cb'     => 'wp_page_menu',
+    <div class="row">
+      <DIV class='row navbar navbar-default'>
+        <DIV class='col-sm-3'></DIV>
+        <DIV class='col-sm-6'>
+          <header id="header" class="collapse navbar-collapse" role="banner">
+
+            <?php 
+            if ( has_nav_menu( 'primary' ) ) {
+             wp_nav_menu( array(
+              'theme_location'  => 'primary',
+              'container'       => false,
+              'menu_class'      => 'nav navbar-nav',
+              'fallback_cb'     => 'wp_page_menu',
             // 'walker'          => new wp_bootstrap_navwalker()
-            )
-           ); 
-         }
-         ?>
+              )
+             ); 
+           }
+           ?>
+
+         </header><!--/#header-->
        </div>
-     </header><!--/#header-->
+       <DIV class='col-sm-3'></DIV>
+     </DIV>
    </DIV>
  </DIV>
 
-</div>
+

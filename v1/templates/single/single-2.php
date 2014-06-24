@@ -1,9 +1,9 @@
 <?php
 get_header();
-blog_row_start('fluid');
-	get_sidebar('right');
+blog_row_start();
+	//get_sidebar('right');
 ?>	
-		<DIV class="col-sm-6">
+		<DIV class="col-sm-9">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<DIV class="blog-post">
 					<?php savage_get_post_content(); ?>

@@ -1,5 +1,5 @@
 <DIV class="col-sm-9">
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<DIV class="blog-post">
 			<?php savage_get_post_content_loop(); ?>
 		</DIV>

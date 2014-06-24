@@ -79,3 +79,16 @@ height: 180px;
   line-height: 20px;
 }
 */
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0px !important;
+  border: 1px solid transparent;
+}
+
+
+.current_page_item {
+  color: #555;
+  background-color: #e7e7e7;
+}
