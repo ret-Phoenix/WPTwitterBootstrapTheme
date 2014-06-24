@@ -1,6 +1,5 @@
 <?php
 
-
 if (is_front_page()) {
 	if ((is_active_sidebar('sidebar-all-left')) or (is_active_sidebar('front-page-only-left'))) {
 		echo '<div class="widget col-lg-3">';
