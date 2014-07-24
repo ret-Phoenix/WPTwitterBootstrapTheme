@@ -53,7 +53,7 @@ $query = get_posts(array(
                 <div class="container">
                   <div class="carousel-caption">
                     <h1><?php echo $row->post_title; ?></h1>
-                    <p><?php echo $row->post_content; ?></p>
+                    <div><?php echo $row->post_content; ?></div>
                   </div>
                 </div>
               </div>
