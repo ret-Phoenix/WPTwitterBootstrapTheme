@@ -1,4 +1,9 @@
 <DIV class="col-xs-12 col-md-9">
+	<?php  
+		if (is_front_page()) {
+			query_posts($query_string.'&cat=1&showposts=5'); 
+		}
+	?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<DIV class="blog-post">
 			<?php savage_get_post_content_loop(); ?>

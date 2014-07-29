@@ -31,22 +31,30 @@
   ?>
 
 
-  <?php
-  if (header_image()) {
-    ?> 
-    <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-    <?php  
-  }
+  <?php  
 
+  if (get_header_image() != '') { 
+    echo '
+
+  <div class="container">
+    <DIV class="row logo-bg">
+
+    ';
+
+      echo '<img src="'.get_header_image().'" height="'.get_custom_header()->height.'" width="'.get_custom_header()->width.'" alt="">';
+
+      echo '</div></div>';
+  }
+  
   if ($theme_options['show-slider-top'] == 'on') {
-    show_slider_top(2);
+      show_slider_top(2);
   }
 
 
   ?>
   <div class="container">
-    <div class="row">
-      <DIV class='navbar navbar-default'>
+    <div class="row logo-bg">
+      <DIV class='navbar navbar-inverse'>
         <DIV class='col-sm-9'>
           <header id="header" class="collapse navbar-collapse" role="banner">
 
@@ -55,9 +63,9 @@
              wp_nav_menu( array(
               'theme_location'  => 'primary',
               'container'       => false,
-              'menu_class'      => 'nav navbar-nav',
+              'menu_class'      => 'nav navbar-nav navbar-main',
               'fallback_cb'     => 'wp_page_menu',
-            // 'walker'          => new wp_bootstrap_navwalker()
+              'walker'          => new wp_bootstrap_navwalker()
               )
              ); 
            }

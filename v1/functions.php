@@ -1,4 +1,5 @@
 <?php 
+include(TEMPLATEPATH.'/lib/navwalker.php');
 
 // function show_content_slider() {
 // 	include(TEMPLATEPATH.'/templates/slider/-content-slider-1.php');
@@ -56,7 +57,7 @@ function savage_get_post_content_loop()
 	}
 
 	echo '<br>';
-	echo '<p class="help-block">';
+	echo '<DIV class="help-block">';
 	if ($theme_option['show-author'] == 'on') {
 		printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'twentyten' ),
 			'meta-prep meta-prep-author',
@@ -85,20 +86,20 @@ function savage_get_post_content_loop()
 		}
 	}
 
-	echo '</p>';
+	echo '</DIV>';
 
 
 
 	echo '
-	<p>
-	<span class="pull-left">
-	<a class="btn btn-primary btn-xs" href="'.$link.'">Подробнее ...</a>
-	</span>
-	<div class="pull-right">
-	<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
-	<div class="yashare-auto-init" data-yashareLink="'.$link.'" data-yashareTitle="'.$title.'" data-yashareImage="'.$thumb_pict.'" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,gplus" data-yashareTheme="counter"></div>
-	</div>
-	</p>
+	<DIV>
+		<span class="pull-left">
+			<a class="btn btn-primary btn-xs" href="'.$link.'">Подробнее ...</a>
+		</span>
+		<div class="pull-right">
+			<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
+			<div class="yashare-auto-init" data-yashareLink="'.$link.'" data-yashareTitle="'.$title.'" data-yashareImage="'.$thumb_pict.'" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,gplus" data-yashareTheme="counter"></div>
+		</div>
+	</DIV>
 	';
 
 }
@@ -194,11 +195,21 @@ function savage_widgets_init () {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar all (left)', 'savage' ),
 		'id'            => 'sidebar-all-left',
+		'before_widget' => '<div class="list-group">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<div class="list-group-item active">',
+		'after_title'   => '</div><div >',
+		) );
+
+	register_sidebar( array(
+		'name'          => __( 'Sidebar all (left)', 'savage' ),
+		'id'            => 'sidebar-all-left',
 		'before_widget' => '<div class="panel panel-default">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<div class="panel-heading">',
 		'after_title'   => '</div><div class="panel-body">',
 		) );
+
 
 	register_sidebar( array(
 		'name'          => __( 'Sidebar page (left)', 'savage' ),

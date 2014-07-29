@@ -42,7 +42,6 @@
     show_slider_top(3);
   }
 
-
   ?>
   <div class="container">
     <div>
@@ -55,15 +54,15 @@
              wp_nav_menu( array(
               'theme_location'  => 'primary',
               'container'       => false,
-              'menu_class'      => 'nav navbar-nav',
+              'menu_class'      => 'nav navbar-nav navbar-main',
               'fallback_cb'     => 'wp_page_menu',
-            // 'walker'          => new wp_bootstrap_navwalker()
+              'walker'          => new wp_bootstrap_navwalker()
               )
              ); 
            }
            ?>
 
-         </header><!--/#header-->
+         </header>
        </div>
        
      </DIV>
