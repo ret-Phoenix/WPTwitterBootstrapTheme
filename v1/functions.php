@@ -122,7 +122,8 @@ function savage_get_post_content()
 	
 	echo '<h2 class="blog-post-title">'.$thumb.'<a href="'.$link.'" rel="bookmark">'.$title.'</a></h2>';
 
-	the_content('', more_link_text, strip_teaser);
+	//the_content('', more_link_text, strip_teaser);
+	the_content();
 
 	echo '<br>';
 	echo '<p class="help-block">';
