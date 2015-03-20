@@ -95,6 +95,12 @@ function savage_get_post_content_loop()
 		<span class="pull-left">
 			<a class="btn btn-primary btn-xs" href="'.$link.'">Подробнее ...</a>
 		</span>
+		<span class="pull-right">
+			<div id="vk_like_'.get_the_id().'"></div>
+			<script type="text/javascript">
+			VK.Widgets.Like("vk_like_'.get_the_id().'", {type: "button", height: 24, pageUrl: "'.$link.'"});
+			</script>
+		</span>
 		<div class="pull-right">
 			<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
 			<div class="yashare-auto-init" data-yashareLink="'.$link.'" data-yashareTitle="'.$title.'" data-yashareImage="'.$thumb_pict.'" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,gplus" data-yashareTheme="counter"></div>
@@ -162,6 +168,13 @@ function savage_get_post_content()
 
 	echo '
 	<p>
+	<div class="pull-right">
+		<div id="vk_like_'.get_the_id().'"></div>
+		<script type="text/javascript">
+		VK.Widgets.Like("vk_like_'.get_the_id().'", {type: "button", height: 24, pageUrl: "'.$link.'"});
+		</script>
+	</div>
+	
 	<div class="pull-right">
 	<script type="text/javascript" src="//yandex.st/share/share.js" charset="utf-8"></script>
 	<div class="yashare-auto-init" data-yashareLink="'.$link.'" data-yashareTitle="'.$title.'" data-yashareImage="'.$thumb_pict.'" data-yashareL10n="ru" data-yashareQuickServices="vkontakte,facebook,twitter,gplus" data-yashareTheme="counter"></div>

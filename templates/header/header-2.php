@@ -17,6 +17,14 @@
 
   </script>    
 
+<!-- Put this script tag to the <head> of your page -->
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
+
+<script type="text/javascript">
+  VK.init({apiId: 4021951, onlyWidgets: true});
+</script>
+
+
 </head>
 
 <body <?php body_class() ?>>
