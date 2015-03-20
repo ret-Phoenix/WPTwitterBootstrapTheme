@@ -1,0 +1,9 @@
+<?php
+get_header();
+blog_row_start('fluid');
+	get_sidebar('right');
+	include(TEMPLATEPATH.'/templates/blog/blog-2.php');
+	get_sidebar('left');
+blog_row_end();
+get_footer(); 
+?>
